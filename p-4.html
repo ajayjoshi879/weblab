@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<script>
+
+	var str = prompt("enter the value");
+	
+	if(!isNaN(str))
+	{
+		var num = parseInt(str);
+		var rev = 0;
+		var rem;
+		while(num>0)
+		{
+		 rem = num%10;
+		rev = rev*10 + rem;
+		num = parseInt(num/10);
+		}
+		alert("reverse of "+str+"is"+rev);
+		
+	}
+	else
+	{
+		for(var i=0;i<str.length;i++)
+		{
+		var c = str.charAt(i);
+		
+		if( c== "a" ||c== "e"||c== "i"|| c == "o" || c == "u")
+		{
+		         break;
+		}
+		}
+		if(i< str.length)
+		{
+			alert("vowel is found at"+(i+1));
+		}
+		else
+		{
+		alert("no vowel found");
+		}
+	}
+</script>
+</body>
+</html>
+		
+		
+		

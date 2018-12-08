@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+table,td,th
+{
+	border:10px solid orange;
+	padding: 20px;
+	width:33%;
+	height:60%;
+	text-align:center;
+	background-color:darkgray;
+	border-collapse:collapse;
+}
+table{margin:auto;}
+input{text-align:left;}
+</style>
+
+
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/F234FA41-9B20-3242-A8CA-E829784CD456/main.js" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E5773714-1C08-0448-826E-FBCDBDF9D420/abn/main.css"/><script type="text/javascript">
+function calc(cid)
+{
+	var val1=parseFloat(document.getElementById("value1").value);
+	var val2=parseFloat(document.getElementById("value2").value);
+	
+	if(isNaN(val1) || isNaN(val2))
+		alert("ENTER VALID NUMBER");
+	else if(cid=="add")
+		document.getElementById("answer").value=val1+val2;
+	else if(cid=="sub")
+		document.getElementById("answer").value=val1-val2;
+	else if(cid=="mul")
+		document.getElementById("answer").value=val1*val2;
+	else if(cid=="div")
+		document.getElementById("answer").value=val1/val2;
+}
+
+function cls()
+{
+	value1.value="";
+	value2.value="";
+	answer.value="";
+}
+</script>
+</head>
+
+<body>
+<table>
+
+<tr> <th colspan="4">SIMPLE CALCULATOR</th> </tr>
+
+<tr> <th>value1</th>
+     <td><input type="text" id="value1" value=""/> </td>
+     <th>value2</th>
+     <td><input type="text" id="value2" value=""/> </td>
+</tr>
+
+<tr>
+<td><button id="add" onclick="calc(this.id)"> JSKADDITION</button> </td>
+
+</tr>
+
+<tr>
+<td>Answer</td>
+<td><input type="text" id="answer" value=" " disabled/> </td>
+<td colspan="2"><input type="button" value="CLEAR ALL" onclick="cls()" /> </td>
+</tr>
+
+</table>
+</body>
+</html>
